@@ -233,58 +233,6 @@ section {
     font-size: 19px;
 }
 
-
-#contact {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.contpic {
-    margin-top: 100px;
-    border-radius: none;
-}
-
-
-.contact-section form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-section input,
-.contact-section textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    width: 280px;
-}
-
-.contact-section button {
-    padding: 10px;
-    background-color: #1e83be;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.contact-section button:hover {
-    background-color: #f0a500;
-}
-
-
-.btn {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background-color: #f0a500;
-}
-
 footer {
 
     background-color: rgb(0, 0, 0);
@@ -325,8 +273,8 @@ footer a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
     }
 
     .pic {
