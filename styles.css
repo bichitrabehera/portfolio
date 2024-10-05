@@ -1,16 +1,4 @@
-::-webkit-scrollbar {
-    width: 5px;
-}
 
-
-::-webkit-scrollbar-track {
-    background: #154d8d;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ffffff;
-    border-radius: 6px;
-}
 
 body {
     margin: 0;
@@ -162,7 +150,7 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
     margin-bottom: 20px;
     padding: 10px;
 }
