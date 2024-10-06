@@ -16,7 +16,7 @@ html {
 
 nav {
     width: 100%;
-    height: 70px;
+    height: 60px;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -89,11 +89,11 @@ section {
 }
 
 .homecontainer span {
-    color: blue;
+    color: #14a3dc;
 }
 
 .imgcir {
-    margin-top: 20px;
+    
     border-radius: 50%;
 }
 
@@ -109,6 +109,20 @@ section {
     align-items: center;
 }
 
+.abco .pic{
+    margin-left: 20px;
+}
+
+.pic {
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+
+@keyframes glow{
+    50%{box-shadow: 2px 2px 30px rgb(99, 2, 179);} 
+}
 .aboutcont {
     padding: 3em;
     font-size: 20px;
@@ -188,6 +202,7 @@ section {
     border: 1px solid #14a3dc;
     font-size: 20px;
     animation-duration: 2s;
+    border-radius: 10px;
 }
 
 .project:hover {
@@ -199,7 +214,17 @@ section {
 .project a {
     text-decoration: none;
     color: crimson;
-    font-size: 19px;
+    font-size: 22px;
+}
+.project a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+}
+
+.project .protitle{
+    font-size: 23px;
+    color: #14a3dc;
 }
 
 footer {
@@ -240,6 +265,8 @@ footer a {
     .homeabout{
         padding: 30px;
     }
+
+    
     img {
         display: flex;
         align-items: center;
@@ -247,12 +274,20 @@ footer a {
         height: 200px;
         width: 200px;
     }
-
+    
     .pic {
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        margin-left: 100px;
 
+    }
+    .container .pic{
+        margin-left: 50px;
+        margin-bottom: 30px;
     }
 
     section {
@@ -267,11 +302,10 @@ footer a {
 
     .homecontainer {
         display: block;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         margin-top: 70px;
         width: 100%;
-
         font-size: 30px;
     }
 
