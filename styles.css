@@ -92,7 +92,7 @@ section {
 
 .imgcir {
 
-    border-radius: 40%;
+    border-radius: 50%;
     animation-name: glow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
