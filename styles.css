@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
     padding: 0;
@@ -76,7 +74,7 @@ section {
     display: flex;
     justify-content: center;
     padding: 20px;
-    
+
 }
 
 .homecontainer {
@@ -93,8 +91,12 @@ section {
 }
 
 .imgcir {
+
+    border-radius: 40%;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     
-    border-radius: 50%;
 }
 
 
@@ -109,23 +111,27 @@ section {
     align-items: center;
 }
 
-.abco .pic{
+.abco .pic {
     margin-left: 20px;
 }
 
-.pic {
-    animation-name: glow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    border-radius: 50%;
+
+
+@keyframes glow {
+    50% {
+        box-shadow: 2px 2px 30px rgb(2, 123, 179);
+    }
 }
 
-@keyframes glow{
-    50%{box-shadow: 2px 2px 30px rgb(99, 2, 179);} 
-}
 .aboutcont {
     padding: 3em;
-    font-size: 20px;
+    font-size: 22px;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+.yellowcont {
+    color: yellow;
 }
 
 .about-size {
@@ -137,7 +143,7 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 300;
     color: #14a3dc;
     align-items: left;
 
@@ -166,9 +172,13 @@ section {
     flex-wrap: wrap;
     gap: 50px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 40px;
 }
 
+.rowskill img{
+    height: 130px;
+    width: 130px;
+}
 .rowskill h2 img {
     font-size: 36px;
 }
@@ -197,7 +207,7 @@ section {
     padding: 10px;
     margin: 20px;
     height: auto;
-    width: auto;
+    
     background-color: #000000;
     border: 1px solid #14a3dc;
     font-size: 20px;
@@ -216,13 +226,14 @@ section {
     color: crimson;
     font-size: 22px;
 }
+
 .project a:hover {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    
+
 }
 
-.project .protitle{
+.project .protitle {
     font-size: 23px;
     color: #14a3dc;
 }
@@ -262,11 +273,12 @@ footer a {
     * {
         padding: 0;
     }
-    .homeabout{
+
+    .homeabout {
         padding: 30px;
     }
 
-    
+
     img {
         display: flex;
         align-items: center;
@@ -274,7 +286,7 @@ footer a {
         height: 200px;
         width: 200px;
     }
-    
+
     .pic {
         display: flex;
         align-items: center;
@@ -285,7 +297,8 @@ footer a {
         margin-left: 70px;
 
     }
-    .container .pic{
+
+    .container .pic {
         margin-left: 50px;
         margin-bottom: 30px;
     }
@@ -321,6 +334,10 @@ footer a {
 
     }
 
+    .rowskill img{
+        height: 100px;
+        width: 100px;
+    }
 
     .rowskill {
         flex-direction: column;
