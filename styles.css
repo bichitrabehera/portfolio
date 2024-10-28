@@ -90,6 +90,7 @@ section {
     color: #14a3dc;
 }
 
+
 .imgcir {
 
     border-radius: 50%;
@@ -98,10 +99,19 @@ section {
     animation-iteration-count: infinite;
     
 }
+.imgver {
+
+    border-radius: 50%;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-bottom: 30px;
+    
+}
 
 
 .container {
-    padding: 40px;
+    padding: 20px;
 
 }
 
@@ -124,10 +134,11 @@ section {
 }
 
 .aboutcont {
-    padding: 3em;
+    padding: 20px;
     font-size: 22px;
     letter-spacing: 1.1px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .yellowcont {
@@ -204,7 +215,7 @@ section {
 }
 
 .project {
-    padding: 10px;
+    padding: 5px;
     margin: 20px;
     height: auto;
     
@@ -221,10 +232,14 @@ section {
     color: #ffffff;
 }
 
+.project p{
+    padding: 5px;
+}
 .project a {
     text-decoration: none;
     color: crimson;
     font-size: 22px;
+    padding-left: 5px;
 }
 
 .project a:hover {
@@ -313,9 +328,15 @@ footer a {
         justify-content: center;
     }
 
+    .picdiv{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .homecontainer {
         display: block;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         margin-top: 70px;
         width: 100%;
