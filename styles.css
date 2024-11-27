@@ -221,7 +221,6 @@ section {
     
     background-color: #000000;
     border: 1px solid #14a3dc;
-    font-size: 20px;
     animation-duration: 2s;
     border-radius: 10px;
 }
@@ -234,12 +233,12 @@ section {
 
 .project p{
     padding: 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .project a {
     text-decoration: none;
     color: crimson;
-    font-size: 22px;
+    font-size: 19px;
     padding-left: 5px;
 }
 
