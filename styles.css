@@ -379,11 +379,11 @@ footer a {
         display: none;
     }
 
-    project a{
+    .project a{
         font-size : 16px;
     }
     
-    project p{
+    .project p{
         font-size : 16px;
     }
 
