@@ -232,12 +232,12 @@ section {
 
 .project p{
     padding: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 .project a {
     text-decoration: none;
     color: crimson;
-    font-size: 16px;
+    font-size: 20px;
     padding-left: 5px;
 }
 
@@ -379,7 +379,13 @@ footer a {
         display: none;
     }
 
-
+    project a{
+        font-size : 16px;
+    }
+    
+    project p{
+        font-size : 16px;
+    }
 
     #contact {
         display: flex;
