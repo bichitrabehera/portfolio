@@ -97,21 +97,22 @@ section {
     animation-name: glow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    
-}
-.imgver {
 
+}
+
+.imgver {
+    padding: 30px;
     border-radius: 50%;
     animation-name: glow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     margin-bottom: 30px;
-    
+
 }
 
 
 .container {
-    padding: 20px;
+    padding: 40px;
 
 }
 
@@ -126,15 +127,8 @@ section {
 }
 
 
-
-@keyframes glow {
-    50% {
-        box-shadow: 2px 2px 30px rgb(2, 123, 179);
-    }
-}
-
 .aboutcont {
-    padding: 20px;
+    padding-left: 30px;
     font-size: 22px;
     letter-spacing: 1.1px;
     line-height: 1.5;
@@ -157,12 +151,6 @@ section {
     font-weight: 300;
     color: #14a3dc;
     align-items: left;
-
-}
-
-.titles:hover {
-    animation-delay: 1s;
-    transform: translateY(20px);
 }
 
 #skills {
@@ -186,10 +174,11 @@ section {
     padding: 40px;
 }
 
-.rowskill img{
+.rowskill img {
     height: 130px;
     width: 130px;
 }
+
 .rowskill h2 img {
     font-size: 36px;
 }
@@ -214,38 +203,51 @@ section {
     margin: 20px;
 }
 
+.containerproj {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .project {
     padding: 5px;
     margin: 20px;
     height: auto;
-    
+    width: 500px;
     background-color: #000000;
     border: 1px solid #14a3dc;
     font-size: 20px;
+    border-radius: 4px;
     animation-duration: 2s;
-    border-radius: 10px;
+    animation: slideIn 0.5s ease-out forwards;
 }
 
-.project:hover {
-    background-color: #14a3dcaf;
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
 
-    color: #ffffff;
+    to {
+        transform: translateX(0);
+    }
 }
 
-.project p{
-    padding: 5px;
+.project p {
     font-size: 20px;
+    color: #14a3dc;
 }
+
 .project a {
     text-decoration: none;
     color: crimson;
-    font-size: 22px;
-    padding-left: 5px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .project a:hover {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -255,7 +257,6 @@ section {
 }
 
 footer {
-
     background-color: rgb(0, 0, 0);
     height: 100%;
     width: 100%;
@@ -329,12 +330,13 @@ footer a {
         justify-content: center;
     }
 
-    .picdiv{
+    .picdiv {
         margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .homecontainer {
         display: block;
         /* justify-content: center; */
@@ -356,7 +358,7 @@ footer a {
 
     }
 
-    .rowskill img{
+    .rowskill img {
         height: 100px;
         width: 100px;
     }
