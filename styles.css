@@ -232,14 +232,14 @@ a:hover {
 
 
 .project p {
-    font-size: 23px;
+    font-size: 20px;
     color: #14a3dc;
 }
 
 .project a {
     text-decoration: none;
     color: crimson;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .project a:hover {
@@ -249,7 +249,7 @@ a:hover {
 }
 
 .project .protitle {
-    font-size: 23px;
+    font-size: 20px;
     color: #14a3dc;
 }
 
@@ -335,7 +335,7 @@ footer a {
 
     .homecontainer {
         display: block;
-        /* justify-content: center; */
+        justify-content: center;
         align-items: center;
         margin-top: 70px;
         width: 100%;
@@ -375,61 +375,26 @@ footer a {
         align-items: center;
     }
 
+    .titles{
+        font-size: 25px;
+    }
+
     .right {
         display: none;
     }
 
     .project {
-        width: 300px;
+        width: 90%;
+        height: 90px;
+        padding: 10px;
+    }
 
-    .project p {
+    .project .protitle {
         font-size: 17px;
     }
 
-    #contact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .contact-section form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact-section input,
-    .contact-section textarea {
-        margin-bottom: 10px;
-        padding: 10px;
-        font-size: 16px;
-        width: 280px;
-    }
-
-    .contact-section button {
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-
-    .contact-section button:hover {
-        background-color: #f0a500;
-    }
-
-
-    .btn {
-        display: inline-block;
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-        margin-top: 10px;
-    }
-
-    .btn:hover {
-        background-color: #f0a500;
+    .project a{
+        font-size: 17px;
     }
 
     footer {
