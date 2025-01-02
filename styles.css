@@ -70,7 +70,6 @@ a:hover {
 
 section {
     height: auto;
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -129,7 +128,7 @@ section {
 
 .aboutcont {
     padding-left: 30px;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1.1px;
     line-height: 1.5;
     text-align: justify;
@@ -214,13 +213,14 @@ section {
     padding: 5px;
     margin: 20px;
     height: auto;
-    width: 500px;
+    width: 300px;
     background-color: #000000;
     border: 1px solid #14a3dc;
     font-size: 20px;
     border-radius: 4px;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation: slideIn 0.5s ease-out forwards;
+    animation-timeline: scroll();
 }
 
 @keyframes slideIn {
@@ -232,6 +232,7 @@ section {
         transform: translateX(0);
     }
 }
+
 
 .project p {
     font-size: 20px;
@@ -252,7 +253,7 @@ section {
 }
 
 .project .protitle {
-    font-size: 23px;
+    font-size: 20px;
     color: #14a3dc;
 }
 
@@ -383,7 +384,13 @@ footer a {
         display: none;
     }
 
+    .project{
+        width: 300px;
+    }
 
+    .project p{
+        font-size: 17px;
+    }
 
     #contact {
         display: flex;
