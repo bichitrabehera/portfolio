@@ -2,9 +2,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(0, 0, 0);
-    color: white;
-    font-family: sans-serif;
-
+    color: rgb(255, 255, 255);
+    font-family: 'Source Sans 3', sans-serif;
+    overflow-x: hidden;
 }
 
 html {
@@ -14,28 +14,26 @@ html {
 
 nav {
     width: 100%;
-    height: 50px;
+    height: 55px;
     overflow: hidden;
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: rgb(27, 67, 100);
+    background-color: rgb(10, 10, 10);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-
 }
 
 .left {
-
     justify-content: space-evenly;
-    color: white;
+    color: rgb(4, 4, 4);
 }
 
 .left a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 20px;
     justify-content: space-evenly;
 }
@@ -48,7 +46,7 @@ nav ul {
 
 .right a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     margin: 20px;
     justify-content: space-evenly;
@@ -56,9 +54,8 @@ nav ul {
 
 .right {
     padding: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-
 
 nav ul li {
     list-style: none;
@@ -66,76 +63,181 @@ nav ul li {
 
 a:hover {
     animation-delay: 5s;
-    color: rgb(0, 0, 0);
+    color: rgb(23, 131, 219);
 }
 
-#about {
-    height: auto;
+#home {
+    height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    background: url('pictures/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
+    background-size: cover;
 }
 
 .homecontainer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 110px;
-    font-size: 35px;
 }
 
-.homecontainer span {
-    color: #14a3dc;
+.heading-about {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 800;
+    animation: slideIn 0.5s ease-out forwards;
 }
 
-.imgcir {
-    border-radius: 25px;
-    animation-name: glow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-
-}
-
-.imgver {
-    padding: 30px;
-    border-radius: 50%;
-    animation-name: glow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    margin-bottom: 30px;
-
-}
-
-
-.container {
-    padding: 40px;
-
-}
-
-.abco {
-    padding: 0 40px;
+.homeabout {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    animation: slideOut 0.5s ease-out forwards;
+}
+
+.homeabout p {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.heroo-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homecontainer button {
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    background-color: rgb(0, 77, 128);
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.homecontainer button a {
+    text-decoration: none;
+    color: white;
+}
+
+.homecontainer button:hover {
+    background-color: rgb(0, 126, 175);
+    transform: translateY(-5px);
+    transform: 0.2s;
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+@keyframes slideIn {
+    from {
+        transform: translateX(-150%);
+    }
 
-.abco .pic {
-    margin-left: 20px;
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOut {
+    from {
+        transform: translateX(150%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
+.about-info {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 4rem;
+}
+
+.containerabout {
+    max-width: 1200px;
+}
 
 .aboutcont {
-    padding: 0 50px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 1.1px;
     word-spacing: 1px;
-    hyphens: auto;
     line-height: 1.5;
 }
 
-.yellowcont {
-    color: yellow;
+.about-container {
+    display: flex;
+    justify-content: center;
+    /* Ensure alignment */
+    gap: 80px;
+}
+
+.aboutcont,
+.skills-vert {
+    flex: 1;
+}
+
+.rowskill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.aboutcont h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+
+.hero-btn {
+    justify-content: start;
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    background-color: rgb(0, 77, 128);
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-btn  a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-btn:hover {
+    background-color: rgb(0, 126, 175);
+    transform: translateY(-5px);
+    transform: 0.2s;
+}
+
+.skillcont h3 {
+    margin-bottom: 2rem;
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.skills-vert h3 {
+    margin-bottom: 2rem;
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+#about {
+    height: auto;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000000;
 }
 
 .about-size {
@@ -147,35 +249,53 @@ a:hover {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 800;
     color: #14a3dc;
     align-items: left;
-    font-style: italic;
     letter-spacing: 0.2rem;
+    padding-bottom: 2rem;
+}
+
+.yellowcont {
+    color: #dc8c14;
 }
 
 #skills {
     padding: 20px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
 }
 
 .skillcont {
-    max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
+    display: none;
 }
-
 
 .rowskill {
-    padding: 0 20px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 50px;
-    margin-bottom: 20px;
+    margin: 0;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.rowskill h2 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+    border: 1px solid rgb(35, 146, 190);
+    border-radius: 0.2rem;
+    background-color: #000000;
+    color: grey;
+    animation: float 3s ease-in-out infinite;
+}
+
+.rowskill h2:hover{
+    color: white;
+}
 
 @keyframes float {
     0% {
@@ -183,30 +303,12 @@ a:hover {
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 
     100% {
         transform: translateY(0);
     }
-}
-
-.rowskill h2 {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: float 3s ease-in-out infinite;
-    transition-duration: 0.3s;
-    border: 1px solid rgb(35, 138, 190);
-    border-radius: 25px;
-}
-
-
-.rowskill i {
-    font-size: 50px;
-    margin: 20px;
-
 }
 
 .containerproj {
@@ -218,27 +320,15 @@ a:hover {
 
 .project {
     padding: 20px;
-    margin: 20px;
+    margin: 30px;
     height: auto;
-    width: auto;
+    width: 280px;
     background-color: #000000;
     border: 1px solid #14a3dc;
     font-size: 23px;
     border-radius: 4px;
-
     animation: slideIn 0.5s ease-out forwards;
 }
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-150%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
 
 .project p {
     font-size: 20px;
@@ -254,7 +344,6 @@ a:hover {
 .project a:hover {
     text-decoration: none;
     color: rgb(255, 255, 255);
-
 }
 
 .project .protitle {
@@ -262,14 +351,77 @@ a:hover {
     color: #14a3dc;
 }
 
+#contact {
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #242424;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+form input,
+form textarea {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+    background-color: #444;
+}
+
+.contact-btn {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    background-color: rgb(0, 77, 128);
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-btn:hover {
+    background-color: rgb(0, 126, 175);
+    transform: translateY(-5px);
+    transform: 0.2s;
+}
+
 footer {
-    background-color: rgb(27, 67, 100);
+    background-color: rgb(25, 25, 25);
     height: 100%;
     width: 100%;
     bottom: 0px;
     left: 100px;
     right: 100px;
-    margin-top: 20pxpx;
     display: block;
     justify-content: space-evenly;
     align-items: center;
@@ -290,56 +442,30 @@ footer a {
     font-size: 15px;
 }
 
+#projects {
+    scroll-margin-top: 60px;
+    /* Adjust this value based on your navbar height */
+}
 
-@media (max-width: 768px) {
-    * {
-        padding: 0;
+
+@media (max-width:768px) {
+    .heading-about {
+        font-size: 2rem;
     }
 
     .homeabout {
-        padding: 30px;
+        padding: 20px 30px;
     }
 
-
-    img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 200px;
-        width: 200px;
-    }
-
-    .pic {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        margin-left: 70px;
-
-    }
-
-    .container .pic {
-        margin-left: 50px;
-        margin-bottom: 30px;
-    }
-
-    section {
-        height: auto;
+    .homeabout p {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .homeabout {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .picdiv {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .homecontainer {
@@ -356,26 +482,23 @@ footer a {
         font-size: 17px;
     }
 
-    .abco {
-        display: block;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .rowskill img {
-        height: 100px;
-        width: 100px;
-    }
-
     .rowskill {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
 
     .rowskill h2 {
-        font-size: 20px;
-        flex: 1 1 100px;
+        font-size: 1rem;
+    }
+
+    .skills-vert {
+        display: none;
+    }
+
+    .skillcont {
+        text-align: center;
+        display: block;
     }
 
     nav {
@@ -386,7 +509,6 @@ footer a {
 
     .titles {
         font-size: 30px;
-
     }
 
     .right {
@@ -407,15 +529,21 @@ footer a {
         font-size: 17px;
     }
 
-    footer {
+    form input,
+    form textarea {
+        width: 90%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+    }
 
+    footer {
         background-color: rgb(0, 0, 0);
-        height: 100%;
-        width: 100%;
-        bottom: 0px;
-        left: 100px;
-        right: 100px;
-        margin-top: 20pxpx;
+        margin-top: 20px;
         display: block;
         justify-content: space-evenly;
         align-items: center;
@@ -436,5 +564,4 @@ footer a {
         color: white;
         font-size: 15px;
     }
-
 }
