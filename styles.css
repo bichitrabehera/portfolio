@@ -14,6 +14,7 @@ html {
     scrollbar-color: blue;
 }
 nav {
+    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -545,6 +546,10 @@ footer a {
     .aboutcont {
         padding: 0px;
         font-size: 17px;
+    }
+
+    .about-info{
+        font-size: 1rem;
     }
 
     .rowskill {
