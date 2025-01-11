@@ -6,6 +6,7 @@ body {
     font-family: 'Source Sans 3', sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
+    letter-spacing: 0.09rem;
 }
 
 html {
@@ -19,7 +20,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(19, 19, 19);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,6 +51,7 @@ nav ul {
     font-size: 1rem;
     margin: 20px;
     justify-content: space-evenly;
+    transition: background-color 0.3s ease;
 }
 
 .right {
@@ -61,8 +63,7 @@ nav ul li {
     list-style: none;
 }
 
-a:hover {
-    animation-delay: 5s;
+a:hover {   
     color: rgb(23, 131, 219);
 }
 
@@ -91,7 +92,7 @@ a:hover {
 }
 
 #home:hover::before {
-    opacity: 1; /* Change the opacity to 1 when the cursor is on the screen */
+    opacity: 2; /* Change the opacity to 1 when the cursor is on the screen */
 
 }
 
@@ -128,6 +129,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .homecontainer button {
@@ -139,6 +141,7 @@ a:hover {
     border-radius: 0.3rem;
     font-size: 0.9rem;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .homecontainer button a {
@@ -157,6 +160,7 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
 @keyframes slideIn {
     from {
         transform: translateX(-150%);
@@ -226,6 +230,7 @@ a:hover {
     border-radius: 0.3rem;
     font-size: 0.9rem;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .hero-btn  a {
@@ -273,7 +278,7 @@ a:hover {
     color: #14a3dc;
     align-items: left;
     letter-spacing: 0.2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .yellowcont {
@@ -337,42 +342,54 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
-
 .project {
+    width: 300px;
+    background-color: #222222;
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
     padding: 20px;
-    margin: 30px;
-    height: auto;
-    width: 280px;
-    background-color: #000000;
-    border: 1px solid #14a3dc;
-    font-size: 23px;
-    border-radius: 4px;
-    animation: slideIn 0.5s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px;
 }
 
-.project p {
-    font-size: 20px;
-    color: #14a3dc;
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.project a {
+.project-img img {
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.protitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #eaeaea;
+}
+
+.project-links .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
     text-decoration: none;
-    color: crimson;
-    font-size: 20px;
+    border-radius: 0.2rem;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-.project a:hover {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+.project-links .btn:hover {
+    background-color: #0056b3;
 }
 
-.project .protitle {
-    font-size: 20px;
-    color: #14a3dc;
-}
 
 #contact {
-    padding: 50px 20px;
+    padding: 20px 20px;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -389,8 +406,9 @@ a:hover {
 form {
     background-color: #242424;
     border-radius: 8px;
+    max-width: 500px;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
@@ -422,6 +440,7 @@ form textarea:focus {
     border-radius: 0.3rem;
     font-size: 0.9rem;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .contact-btn {
@@ -436,7 +455,7 @@ form textarea:focus {
 }
 
 footer {
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(30, 30, 30, 0.242);
     width: 100%;
     bottom: 0px;
     display: block;
@@ -562,9 +581,8 @@ footer a {
     }
 
     .project {
-        width: 90%;
-        height: 90px;
-        padding: 10px;
+        margin: 20px 30px;
+        padding: 20px;
     }
 
     .project .protitle {
