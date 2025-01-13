@@ -70,6 +70,8 @@ nav .right ul li a:hover {
 
 #home {
     height: 100vh;
+    max-height: 120vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,13 +89,13 @@ nav .right ul li a:hover {
     bottom: 0;
     background: url('pictures/adrien-olichon-RCAhiGJsUUE-unsplash.jpg') no-repeat center center;
     background-size: cover;
-    opacity: 0.5; /* Default opacity of the background image */
-    transition: opacity 2s ease; /* Smooth transition for opacity change */
+    opacity: 0.3; /* Default opacity of the background image */
+    transition: opacity 1s ease; /* Smooth transition for opacity change */
     z-index: -1; /* Make sure the background stays behind the content */
 }
 
 #home:hover::before {
-    opacity: 2; /* Change the opacity to 1 when the cursor is on the screen */
+    opacity: 100; /* Change the opacity to 1 when the cursor is on the screen */
 
 }
 
@@ -352,7 +354,7 @@ nav .right ul li a:hover {
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .project:hover {
@@ -407,11 +409,11 @@ nav .right ul li a:hover {
 form {
     background-color: #242424;
     border-radius: 8px;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
-    max-width: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    margin-bottom: 1rem;
 }
 
 form input,
@@ -434,12 +436,12 @@ form textarea:focus {
 }
 
 .contact-btn {
-    margin-top: 3rem;
-    padding: 1rem 3rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
     background-color: rgb(0, 77, 128);
     border: 1px solid black;
     border-radius: 0.3rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -497,7 +499,10 @@ footer a {
 .social-links a{
     font-size: 1.2rem;
     margin: 0 1.3rem;
-    
+}
+
+.social-links a:hover{
+    color: white;
 }
 
 
