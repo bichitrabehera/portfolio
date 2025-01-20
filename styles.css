@@ -288,15 +288,10 @@ nav .right ul li a:hover {
 
 .underline {
     width: 100px;
-    /* Adjust the width of the underline */
-    height: 5px;
-    /* Thickness of the underline */
-    background: linear-gradient(90deg, #5fb4ff, #1b6bd3);
-    /* Gradient color */
+    height:5px;
+    background: linear-gradient(90deg,rgb(199,27,56),red,rgb(199, 27, 56));
     margin: 10px auto;
-    /* Center the underline and add spacing */
     border-radius: 25px;
-    /* Optional: Rounding the edges */
     margin-bottom: 60px;
 }
 
