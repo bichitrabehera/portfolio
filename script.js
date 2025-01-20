@@ -1,12 +1,3 @@
-const homeSection = document.getElementById("home");
-
-homeSection.addEventListener("touchstart", function () {
-    homeSection.querySelector("::before").style.opacity = '1';
-})
-homeSection.addEventListener("touchend", function () {
-    homeSection.querySelector("::before").style.opacity = '0.3';
-})
-
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize EmailJS
     emailjs.init("Wh97iWEqRn-1zGOLv"); // Replace "YOUR_USER_ID" with your actual EmailJS User ID
