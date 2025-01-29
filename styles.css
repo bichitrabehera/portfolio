@@ -295,6 +295,10 @@ nav .right ul li a:hover {
     margin-bottom: 60px;
 }
 
+.project-detail{
+    font-size: 0.9rem;
+    text-align: left;
+}
 
 .yellowcont {
     color: #dc8c14;
@@ -360,6 +364,7 @@ nav .right ul li a:hover {
 
 .project {
     width: 300px;
+    min-height: 380px;
     background-color: #222222;
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -421,7 +426,6 @@ nav .right ul li a:hover {
 
 form {
     background-color: #242424;
-    border-radius: 8px;
     max-width: 600px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -435,7 +439,7 @@ form textarea {
     padding: 15px;
     margin: 10px 0;
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 1px;
     background-color: #333;
     color: #fff;
     font-size: 16px;
@@ -623,7 +627,7 @@ footer a {
         padding: 15px;
         margin: 10px 0;
         border: 1px solid #333;
-        border-radius: 8px;
+        border-radius: 1px;
         background-color: #333;
         color: #fff;
         font-size: 16px;
