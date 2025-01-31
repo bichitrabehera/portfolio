@@ -1,12 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: #09233C;
     color: rgb(255, 255, 255);
     font-family: 'Source Sans 3', sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
     letter-spacing: 0.09rem;
+    cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M0%2055.2L0%20426c0%2012.2%209.9%2022%2022%2022c6.3%200%2012.4-2.7%2016.6-7.5L121.2%20346l58.1%20116.3c7.9%2015.8%2027.1%2022.2%2042.9%2014.3s22.2-27.1%2014.3-42.9L179.8%20320l118.1%200c12.2%200%2022.1-9.9%2022.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6%2037.9C34.3%2034.1%2028.9%2032%2023.2%2032C10.4%2032%200%2042.4%200%2055.2z%22%2F%3E%3C%2Fsvg%3E'), auto;
 }
 
 html {
@@ -15,14 +16,18 @@ html {
 }
 
 nav {
-    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #141414;
+    padding: 15px 20px;
+    margin: 10px 80px;
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
     color: white;
-    position: sticky;
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 1000;
 }
@@ -72,12 +77,10 @@ nav .right ul li a:hover {
 
 #home {
     height: 100vh;
-    max-height: 120vh;
-    min-height: 80vh;
+    min-height: 30vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: url('pictures/adrien-olichon-RCAhiGJsUUE-unsplash.jpg') opacity;
+    /* background: url('pictures/adrien-olichon-RCAhiGJsUUE-unsplash.jpg') opacity; */
     background-size: cover;
 
 }
@@ -89,6 +92,7 @@ nav .right ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    /* background-color: black; */
     background: url('pictures/WhatsApp\ Image\ 2025-01-20\ at\ 11.48.20\ AM.jpeg') no-repeat center center;
     background-size: cover;
     opacity: 0.6;
@@ -102,14 +106,14 @@ nav .right ul li a:hover {
 .homecontainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .heading-about {
     font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    margin-top: 100px;
     text-align: center;
     color: #ffffff;
     font-weight: 800;
@@ -132,7 +136,7 @@ nav .right ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border: none;
 }
 
 .homecontainer button {
@@ -140,9 +144,9 @@ nav .right ul li a:hover {
     margin-top: 3rem;
     padding: 1rem 3rem;
     background-color: rgb(0, 77, 128);
-    border: 1px solid black;
     border-radius: 0.3rem;
     font-size: 0.9rem;
+    border: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -187,7 +191,7 @@ nav .right ul li a:hover {
 .about-info {
     text-align: center;
     font-size: 1.2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .containerabout {
@@ -266,7 +270,6 @@ nav .right ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #000000;
 }
 
 .about-size {
@@ -288,14 +291,14 @@ nav .right ul li a:hover {
 
 .underline {
     width: 100px;
-    height:5px;
-    background: linear-gradient(90deg,rgb(199,27,56),red,rgb(199, 27, 56));
+    height: 5px;
+    background: linear-gradient(90deg, rgb(199, 27, 56), red, rgb(199, 27, 56));
     margin: 10px auto;
     border-radius: 25px;
     margin-bottom: 60px;
 }
 
-.project-detail{
+.project-detail {
     font-size: 0.9rem;
     text-align: left;
 }
@@ -309,7 +312,6 @@ nav .right ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
 }
 
 .skillcont {
@@ -332,8 +334,8 @@ nav .right ul li a:hover {
     transition-duration: 0.3s;
     border: 1px solid rgb(35, 146, 190);
     border-radius: 0.2rem;
-    background-color: #000000;
-    color: grey;
+    background-color: #0000001e;
+    color: rgb(224, 224, 224);
     animation: float 3s ease-in-out infinite;
 }
 
@@ -365,9 +367,9 @@ nav .right ul li a:hover {
 .project {
     width: 300px;
     min-height: 380px;
-    background-color: #222222;
+    background-color: rgba(255, 255, 255, 0.034);
     border-radius: 0.2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     overflow: hidden;
     text-align: center;
     padding: 20px;
@@ -411,7 +413,7 @@ nav .right ul li a:hover {
 
 #contact {
     padding: 20px 20px;
-    background-color: #000000;
+    background-color: #09233C;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -425,12 +427,13 @@ nav .right ul li a:hover {
 }
 
 form {
-    background-color: #242424;
+    background-color: rgba(255, 255, 255, 0.034);
     max-width: 600px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 1rem;
+    border-radius: 15px;
 }
 
 form input,
@@ -440,9 +443,10 @@ form textarea {
     margin: 10px 0;
     border: 1px solid #333;
     border-radius: 1px;
-    background-color: #333;
+    background-color: #ffffff15;
     color: #fff;
     font-size: 16px;
+    border-radius: 15px;
 }
 
 form input:focus,
@@ -475,13 +479,13 @@ form textarea:focus {
 }
 
 footer {
-    background-color: rgba(30, 30, 30, 0.242);
     width: 100%;
     bottom: 0px;
     display: block;
     justify-content: space-evenly;
     align-items: center;
     color: #e0e0e0;
+    box-shadow: 1px 1px 5px white;
 }
 
 .footcon {
@@ -539,7 +543,7 @@ footer a {
     }
 
     .heading-about {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .homeabout {
@@ -628,13 +632,12 @@ footer a {
         margin: 10px 0;
         border: 1px solid #333;
         border-radius: 1px;
-        background-color: #333;
+        background-color: #ffffff;
         color: #fff;
         font-size: 16px;
     }
 
     footer {
-        background-color: rgb(36, 36, 36);
         margin-top: 20px;
         display: block;
         justify-content: space-evenly;
