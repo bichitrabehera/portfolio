@@ -15,9 +15,15 @@ html {
     scrollbar-color: blue;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+
+}
+
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
     margin: 10px 50px;
@@ -25,11 +31,8 @@ nav {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     color: white;
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
 /* Left Section */
