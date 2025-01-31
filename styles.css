@@ -26,7 +26,6 @@ nav {
     border-radius: 20px;
     color: white;
     position: fixed;
-    max-width: 100vw;
     left: 0;
     right: 0;
     top: 0;
@@ -81,6 +80,8 @@ nav .right ul li a:hover {
     display: flex;
     justify-content: center;
     background-size: cover;
+    background: url('pictures/WhatsApp\ Image\ 2025-01-20\ at\ 11.48.20\ AM.jpeg') no-repeat center;
+    background-size: cover;
 
 }
 
@@ -90,8 +91,7 @@ nav .right ul li a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: url('pictures/WhatsApp\ Image\ 2025-01-20\ at\ 11.48.20\ AM.jpeg') no-repeat center;
-    background-size: cover;
+
 }
 
 .heading-about {
@@ -102,14 +102,14 @@ nav .right ul li a:hover {
     text-align: center;
     color: #ffffff;
     font-weight: 800;
-    animation: slideIn 0.5s ease-out forwards;
+    /* animation: slideIn 0.5s ease-out forwards; */
 }
 
 .homeabout {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: slideOut 0.5s ease-out forwards;
+    /* animation: slideOut 0.5s ease-out forwards; */
 }
 
 .homeabout p {
