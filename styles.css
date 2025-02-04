@@ -1,12 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #09233C;
+    background-color: #021526;
     color: rgb(255, 255, 255);
     font-family: 'Source Sans 3', sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
-    letter-spacing: 0.09rem;
+    letter-spacing: 1px;
     cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M0%2055.2L0%20426c0%2012.2%209.9%2022%2022%2022c6.3%200%2012.4-2.7%2016.6-7.5L121.2%20346l58.1%20116.3c7.9%2015.8%2027.1%2022.2%2042.9%2014.3s22.2-27.1%2014.3-42.9L179.8%20320l118.1%200c12.2%200%2022.1-9.9%2022.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6%2037.9C34.3%2034.1%2028.9%2032%2023.2%2032C10.4%2032%200%2042.4%200%2055.2z%22%2F%3E%3C%2Fsvg%3E'), auto;
 }
 
@@ -19,17 +19,21 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    margin: 10px 50px;
+    padding: 20px 20px;
+    margin: 10px 30px;
     background: rgba(255, 255, 255, 0.075);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 1000;
+}
+
+nav .logo h2 {
+    margin: 0;
 }
 
 /* Left Section */
@@ -66,7 +70,7 @@ nav .right ul li {
 nav .right ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
     font-weight: 600;
 }
@@ -75,83 +79,94 @@ nav .right ul li a:hover {
     color: #007BFF;
 }
 
+.sidebar{
+    width: 225px;
+    background-color: black;
+    left:-250px;
+}
+
 #home {
-    height: 100vh;
     display: flex;
     justify-content: center;
-    background-size: cover;
-    background: url('pictures/hero.jpeg') no-repeat center;
-    background-size: cover;
-
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #021526, #021526);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .homecontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
+    max-width: 800px;
 }
 
 .heading-about {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 100px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: 800;
-    /* animation: slideIn 0.5s ease-out forwards; */
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.homeabout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* animation: slideOut 0.5s ease-out forwards; */
+.homeabout{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 10px;
+    opacity: 0.9;
+    animation: slideIn 1.5s ease-in-out;
 }
 
-.homeabout p {
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.heroo-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.heroo-btn button {
+    background: #003c80;
     border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.homecontainer button {
-    justify-content: center;
-    margin-top: 3rem;
-    padding: 1rem 3rem;
-    background-color: rgb(0, 77, 128);
-    border-radius: 0.3rem;
-    font-size: 0.9rem;
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.homecontainer button a {
+.heroo-btn button a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+    font-family: 'Source Sans 3';
 }
 
-.homecontainer button:hover {
-    background-color: rgb(0, 126, 175);
-    transform: translateY(-5px);
-    transform: 0.2s;
+.heroo-btn button:hover {
+    background: #0041bb;
+    transform: translateY(-3px);
 }
 
-.hero-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 @keyframes slideIn {
     from {
@@ -177,6 +192,7 @@ nav .right ul li a:hover {
     text-align: center;
     font-size: 1.2rem;
     padding-bottom: 2rem;
+    padding: 20px;
 }
 
 .containerabout {
@@ -271,6 +287,7 @@ nav .right ul li a:hover {
     align-items: left;
     letter-spacing: 0.2rem;
     margin-bottom: 0;
+    padding-top: 20px;
 }
 
 
@@ -398,7 +415,6 @@ nav .right ul li a:hover {
 
 #contact {
     padding: 20px 20px;
-    background-color: #09233C;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -406,6 +422,7 @@ nav .right ul li a:hover {
 }
 
 .contact-section {
+    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -413,17 +430,17 @@ nav .right ul li a:hover {
 
 form {
     background-color: rgba(255, 255, 255, 0.034);
-    max-width: 600px;
+    max-width: 650px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 1rem;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 form input,
 form textarea {
-    width: 90%;
+    width: 95%;
     padding: 15px;
     margin: 10px 0;
     border: 1px solid #333;
@@ -431,7 +448,13 @@ form textarea {
     background-color: #ffffff15;
     color: #fff;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 5px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: white;
+    font-family: 'Source Sans 3';
 }
 
 form input:focus,
@@ -455,6 +478,7 @@ form textarea:focus {
 .contact-btn {
     text-decoration: none;
     color: white;
+    border: none;
 }
 
 .contact-btn:hover {
@@ -470,7 +494,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     color: #e0e0e0;
-    box-shadow: 1px 1px 5px white;
+    background-color: #000000;
 }
 
 .footcon {
@@ -478,6 +502,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     font-size: 1rem;
+    padding: 20px;
 }
 
 .footcon a {
@@ -492,19 +517,16 @@ footer a {
 
 .social {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.social-links {
-    height: auto;
-
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px;
 }
 
 .social-links a {
     font-size: 1.2rem;
     margin: 0 1.3rem;
+
 }
 
 .social-links a:hover {
@@ -528,14 +550,14 @@ footer a {
     }
 
     .heading-about {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 
     .homeabout {
-        padding: 20px 30px;
+        padding: 20px 10px;
     }
 
-    .homeabout p {
+    .homeabout{
         font-size: 1rem;
         text-align: center;
     }
@@ -585,15 +607,23 @@ footer a {
 
     nav {
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
+        width: auto;
     }
 
     .titles {
         font-size: 30px;
     }
 
+    .logo h2 {
+        font-size: 1rem;
+    }
+
     .right {
+        display: none;
+    }
+
+    nav .left {
         display: none;
     }
 
@@ -610,6 +640,10 @@ footer a {
         font-size: 17px;
     }
 
+    .contact-section{
+        max-width: 350px;
+    }
+
     form input,
     form textarea {
         width: 90%;
@@ -617,7 +651,6 @@ footer a {
         margin: 10px 0;
         border: 1px solid #333;
         border-radius: 1px;
-        background-color: #ffffff;
         color: #fff;
         font-size: 16px;
     }
@@ -633,14 +666,21 @@ footer a {
 
     .footcon {
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 15px;
+        font-size: 1rem;
     }
 
     footer a {
         text-decoration: none;
         color: white;
         font-size: 15px;
+    }
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
     }
 }
