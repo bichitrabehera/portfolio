@@ -4,15 +4,10 @@ body {
     background-color: #021526;
     color: rgb(255, 255, 255);
     font-family: 'Source Sans 3', sans-serif;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     letter-spacing: 1px;
     cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M0%2055.2L0%20426c0%2012.2%209.9%2022%2022%2022c6.3%200%2012.4-2.7%2016.6-7.5L121.2%20346l58.1%20116.3c7.9%2015.8%2027.1%2022.2%2042.9%2014.3s22.2-27.1%2014.3-42.9L179.8%20320l118.1%200c12.2%200%2022.1-9.9%2022.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6%2037.9C34.3%2034.1%2028.9%2032%2023.2%2032C10.4%2032%200%2042.4%200%2055.2z%22%2F%3E%3C%2Fsvg%3E'), auto;
-}
-
-html {
-    scroll-behavior: smooth;
-    scrollbar-color: blue;
 }
 
 nav {
@@ -462,7 +457,7 @@ form textarea:focus {
     outline: none;
     border-color: #00bcd4;
     background-color: #444;
-    
+
 }
 
 .contact-btn {
@@ -683,5 +678,10 @@ footer a {
         display: flex;
         flex-direction: column;
         margin: 0;
+    }
+
+    .social-links {
+        margin: 0;
+        padding-top: 20px;
     }
 }
