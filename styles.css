@@ -1,26 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #021526;
-    color: rgb(255, 255, 255);
+    background-color: #00091d; /* Base dark background */
+    position: relative;
+    color: white;
     font-family: 'Source Sans 3', sans-serif;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-    cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M0%2055.2L0%20426c0%2012.2%209.9%2022%2022%2022c6.3%200%2012.4-2.7%2016.6-7.5L121.2%20346l58.1%20116.3c7.9%2015.8%2027.1%2022.2%2042.9%2014.3s22.2-27.1%2014.3-42.9L179.8%20320l118.1%200c12.2%200%2022.1-9.9%2022.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6%2037.9C34.3%2034.1%2028.9%2032%2023.2%2032C10.4%2032%200%2042.4%200%2055.2z%22%2F%3E%3C%2Fsvg%3E'), auto;
 }
 
+/* Radial Dot Grid Effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, #00091d 1px);
+    background-size: 20px 20px; /* Adjust for denser or wider grid */
+    z-index: -2;
+}
+
+
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
-    margin: 10px 30px;
-    background: rgba(255, 255, 255, 0.075);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    color: white;
+    padding: 15px 20px;
+    background-color: #000000;
+    color: #c2c2c2;
     position: fixed;
+    backdrop-filter: blur(10px);
     left: 0;
     right: 0;
     top: 0;
@@ -29,64 +41,121 @@ nav {
 
 nav .logo h2 {
     margin: 0;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: rgb(255, 217, 0);
+    font-family: Merienda;
 }
 
-/* Left Section */
-nav .left {
+nav .right {
     display: flex;
-    gap: 15px;
 }
 
-nav .left a {
-    color: white;
-    font-size: 1rem;
-    padding: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav .left a:hover {
-    color: #007BFF;
-}
-
-/* Right Section */
-nav .right ul {
+nav ul {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav .right ul li {
-    display: inline-block;
-}
-
-nav .right ul li a {
-    color: white;
+/* Navigation Links */
+nav ul li a {
+    color: #c2c2c2;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
-    font-weight: 600;
 }
 
-nav .right ul li a:hover {
+nav ul li a:hover {
     color: #007BFF;
 }
 
-.sidebar {
-    width: 225px;
-    background-color: black;
-    left: -250px;
+/* Sidebar (Dropdown Menu) */
+.dropdown-menu {
+    position: fixed;
+    right: -250px;
+    /* Initially hidden off-screen */
+    top: 0;
+    background-color: #000000;
+    color: #c2c2c2;
+    position: fixed;
+    width: 180px;
+    /* Sidebar width */
+    height: 100%;
+    /* Full height */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+    /* Smooth slide animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    /* Space for header */
 }
+
+/* Show menu when open */
+.dropdown-menu.open {
+    right: 0;
+    /* Moves sidebar into view */
+}
+
+/* Dropdown menu items */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.dropdown-menu li {
+    padding: 15px;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    color: #007BFF;
+}
+
+/* Toggle Button (Hamburger Menu) */
+.toggle-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #c2c2c2;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: none;
+    padding: 0 10px;
+}
+
+/* Responsive: Show Toggle Button on Small Screens */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    nav ul.right {
+        display: none;
+        /* Hide normal menu */
+    }
+}
+
 
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(180deg, #021526, #021526);
-    color: white;
+    color: #c2c2c2;
     text-align: center;
 }
 
@@ -109,8 +178,7 @@ nav .right ul li a:hover {
     line-height: 1.6;
     margin-bottom: 20px;
     padding: 10px;
-    opacity: 0.9;
-    animation: slideIn 1.5s ease-in-out;
+    margin: 20px;
 }
 
 .heroo-btn button {
@@ -126,7 +194,7 @@ nav .right ul li a:hover {
 
 .heroo-btn button a {
     text-decoration: none;
-    color: white;
+    color: #c2c2c2;
     transition: color 0.3s;
     letter-spacing: 1px;
     font-family: 'Source Sans 3';
@@ -238,7 +306,7 @@ nav .right ul li a:hover {
 
 .hero-btn a {
     text-decoration: none;
-    color: white;
+    color: #c2c2c2;
 }
 
 .hero-btn:hover {
@@ -277,8 +345,8 @@ nav .right ul li a:hover {
     align-items: center;
     font-size: 40px;
     font-weight: 800;
-    color: #14a3dc;
-    align-items: left;
+    color: #c2c2c2;
+        align-items: left;
     letter-spacing: 0.2rem;
     margin-bottom: 0;
     padding-top: 20px;
@@ -331,8 +399,8 @@ nav .right ul li a:hover {
     border: 1px solid rgb(35, 146, 190);
     border-radius: 0.2rem;
     background-color: #0000001e;
-    color: rgb(224, 224, 224);
-    animation: float 3s ease-in-out infinite;
+    color: #c2c2c2;
+        animation: float 3s ease-in-out infinite;
 }
 
 .rowskill h2:hover {
@@ -358,15 +426,16 @@ nav .right ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    color: #c2c2c2;
 }
 
 .project {
     width: 300px;
     min-height: 380px;
-    background-color: rgba(255, 255, 255, 0.034);
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.192);
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -387,7 +456,7 @@ nav .right ul li a:hover {
     font-size: 18px;
     font-weight: bold;
     margin: 15px 0;
-    color: #eaeaea;
+    color: #c2c2c2;
 }
 
 .project-links .btn {
@@ -395,7 +464,7 @@ nav .right ul li a:hover {
     padding: 10px 20px;
     margin: 5px;
     background-color: #007BFF;
-    color: white;
+    color: #c2c2c2;
     text-decoration: none;
     border-radius: 0.2rem;
     font-size: 14px;
@@ -440,7 +509,7 @@ form textarea {
     border: 1px solid #333;
     border-radius: 1px;
     background-color: #ffffff15;
-    color: #fff;
+    color: #c2c2c2;
     font-size: 16px;
     border-radius: 5px;
     margin-bottom: 30px;
@@ -448,7 +517,7 @@ form textarea {
 
 form input::placeholder,
 form textarea::placeholder {
-    color: white;
+    color: #c2c2c2;
     font-family: 'Source Sans 3';
 }
 
@@ -473,7 +542,7 @@ form textarea:focus {
 
 .contact-btn {
     text-decoration: none;
-    color: white;
+    color: #c2c2c2;
     border: none;
 }
 
@@ -489,7 +558,7 @@ footer {
     display: block;
     justify-content: space-evenly;
     align-items: center;
-    color: #e0e0e0;
+    color: #c2c2c2;
     background-color: #000000;
 }
 
@@ -516,7 +585,6 @@ footer a {
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
-    margin: 20px;
 }
 
 .social-links a {
@@ -539,6 +607,14 @@ footer a {
 @media (max-width:768px) {
     body {
         overflow-x: hidden;
+    }
+
+    nav .logo h2 {
+        font-size: 1.3rem;
+    }
+
+    .toggle-btn {
+        display: block;
     }
 
     #home {
@@ -615,7 +691,7 @@ footer a {
         font-size: 1rem;
     }
 
-    .right {
+    nav .right {
         display: none;
     }
 
@@ -647,7 +723,6 @@ footer a {
         margin: 10px 0;
         border: 1px solid #333;
         border-radius: 1px;
-        color: #fff;
         font-size: 16px;
     }
 
@@ -656,7 +731,6 @@ footer a {
         display: block;
         justify-content: space-evenly;
         align-items: center;
-        color: #e0e0e0;
         height: auto;
     }
 
@@ -670,7 +744,6 @@ footer a {
 
     footer a {
         text-decoration: none;
-        color: white;
         font-size: 15px;
     }
 

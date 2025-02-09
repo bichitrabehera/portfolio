@@ -29,5 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+const toggleBtn = document.querySelector(".toggle-btn");
+const toggleBtnIcon = document.querySelector(".toggle-btn i");
+const dropdownMenu = document.querySelector(".dropdown-menu");
 
+toggleBtn.onclick = function () {
+    dropdownMenu.classList.toggle("open");
 
+    // Toggle icon between bars (☰) and close (✖)
+    if (dropdownMenu.classList.contains("open")) {
+        toggleBtnIcon.classList.replace("fa-bars", "fa-times");
+    } else {
+        toggleBtnIcon.classList.replace("fa-times", "fa-bars");
+    }
+};
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+    if (!toggleBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove("open");
+        toggleBtnIcon.classList.replace("fa-times", "fa-bars"); // Reset icon
+    }
+});
