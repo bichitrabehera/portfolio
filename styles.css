@@ -3,23 +3,25 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #00091d; /* Base dark background */
-    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Base dark background */
     color: white;
     font-family: 'Source Sans 3', sans-serif;
 }
 
 /* Radial Dot Grid Effect */
+/* Radial Dot Grid Effect for Full Page */
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Covers the entire viewport */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, #00091d 1px);
-    background-size: 20px 20px; /* Adjust for denser or wider grid */
-    z-index: -2;
+    background-image: radial-gradient(rgb(36, 36, 36) 1px, #00091d 1px);
+    background-size: 30px 30px; /* Adjust grid density */
+    z-index: -2; /* Ensures it stays in the background */
 }
 
 
@@ -434,6 +436,7 @@ nav ul li a:hover {
     min-height: 380px;
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: #00091d;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.192);
     text-align: center;
@@ -492,7 +495,8 @@ nav ul li a:hover {
 }
 
 form {
-    background-color: rgba(255, 255, 255, 0.034);
+    background-color: #00091d;
+    border: 1px solid rgba(255, 255, 255, 0.199);
     max-width: 650px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
