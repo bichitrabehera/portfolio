@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000; /* Base dark background */
+    background-color: #000000;
     color: white;
     font-family: 'Source Sans 3', sans-serif;
 }
 
-/* Radial Dot Grid Effect */
-/* Radial Dot Grid Effect for Full Page */
 body::before {
     content: "";
-    position: fixed; /* Covers the entire viewport */
+    position: fixed;
+    /* Covers the entire viewport */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(rgb(36, 36, 36) 1px, #00091d 1px);
-    background-size: 30px 30px; /* Adjust grid density */
-    z-index: -2; /* Ensures it stays in the background */
+    background-image: radial-gradient(rgb(80, 80, 80) 1px, #001933 1px);
+    background-size: 20px 20px;
+    /* Adjust grid density */
+    z-index: -2;
+    /* Ensures it stays in the background */
 }
 
 
@@ -46,7 +51,7 @@ nav .logo h2 {
     font-size: 1.7rem;
     letter-spacing: 2px;
     font-weight: bolder;
-    color: rgb(255, 217, 0);
+    color: rgb(0, 140, 255);
     font-family: Merienda;
 }
 
@@ -127,7 +132,6 @@ nav ul li a:hover {
     color: #007BFF;
 }
 
-/* Toggle Button (Hamburger Menu) */
 .toggle-btn {
     position: absolute;
     right: 20px;
@@ -139,7 +143,6 @@ nav ul li a:hover {
     padding: 0 10px;
 }
 
-/* Responsive: Show Toggle Button on Small Screens */
 @media (max-width: 768px) {
     .toggle-btn {
         display: block;
@@ -147,7 +150,6 @@ nav ul li a:hover {
 
     nav ul.right {
         display: none;
-        /* Hide normal menu */
     }
 }
 
@@ -164,16 +166,38 @@ nav ul li a:hover {
 .homecontainer {
     max-width: 800px;
 }
-
 .heading-about {
+    margin: 0 auto;
     font-size: 3.5rem;
     font-weight: bold;
     padding: 10px;
     margin-bottom: 20px;
     line-height: 1.3;
     letter-spacing: 2px;
-    animation: fadeIn 1.5s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black; /* Blinking effect */
+    display: inline-block; /* Ensures width fits text only */
+    
+    animation: typing 4s steps(20) forwards infinite, blink 0.7s steps(1) infinite;
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 73%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
 
 .homeabout {
     font-size: 1.5rem;
@@ -348,7 +372,7 @@ nav ul li a:hover {
     font-size: 40px;
     font-weight: 800;
     color: #c2c2c2;
-        align-items: left;
+    align-items: left;
     letter-spacing: 0.2rem;
     margin-bottom: 0;
     padding-top: 20px;
@@ -402,7 +426,7 @@ nav ul li a:hover {
     border-radius: 0.2rem;
     background-color: #0000001e;
     color: #c2c2c2;
-        animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .rowskill h2:hover {
@@ -436,7 +460,7 @@ nav ul li a:hover {
     min-height: 380px;
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    background-color: #00091d;
+    background-color: #001933;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.192);
     text-align: center;
@@ -495,7 +519,7 @@ nav ul li a:hover {
 }
 
 form {
-    background-color: #00091d;
+    background-color: #001933;
     border: 1px solid rgba(255, 255, 255, 0.199);
     max-width: 650px;
     width: 100%;
@@ -614,7 +638,7 @@ footer a {
     }
 
     nav .logo h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .toggle-btn {
