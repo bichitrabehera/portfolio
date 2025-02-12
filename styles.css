@@ -9,34 +9,17 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #001933;
     color: white;
     font-family: 'Source Sans 3', sans-serif;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    /* Covers the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: radial-gradient(rgb(80, 80, 80) 1px, #001933 1px);
-    background-size: 20px 20px;
-    /* Adjust grid density */
-    z-index: -2;
-    /* Ensures it stays in the background */
-}
-
-
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #000000;
+    background-color: #0000005d;
     color: #c2c2c2;
     position: fixed;
     backdrop-filter: blur(10px);
@@ -46,13 +29,12 @@ nav {
     z-index: 1000;
 }
 
-nav .logo h2 {
+nav .logo h2 , .logo{
     margin: 0;
     font-size: 1.7rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: bolder;
     color: rgb(0, 140, 255);
-    font-family: Merienda;
 }
 
 nav .right {
@@ -67,10 +49,10 @@ nav ul {
     padding: 0;
 }
 
-/* Navigation Links */
 nav ul li a {
     color: #c2c2c2;
     text-decoration: none;
+    font-weight: 800;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -79,36 +61,27 @@ nav ul li a:hover {
     color: #007BFF;
 }
 
-/* Sidebar (Dropdown Menu) */
 .dropdown-menu {
     position: fixed;
     right: -250px;
-    /* Initially hidden off-screen */
     top: 0;
     background-color: #000000;
     color: #c2c2c2;
     position: fixed;
     width: 180px;
-    /* Sidebar width */
     height: 100%;
-    /* Full height */
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
     transition: right 0.4s ease-in-out;
-    /* Smooth slide animation */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    /* Space for header */
 }
 
-/* Show menu when open */
 .dropdown-menu.open {
     right: 0;
-    /* Moves sidebar into view */
 }
 
-/* Dropdown menu items */
 .dropdown-menu ul {
     list-style: none;
     padding: 0;
@@ -124,6 +97,7 @@ nav ul li a:hover {
 .dropdown-menu li a {
     color: white;
     text-decoration: none;
+    font-weight: 800;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -176,9 +150,8 @@ nav ul li a:hover {
     letter-spacing: 2px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid black; /* Blinking effect */
-    display: inline-block; /* Ensures width fits text only */
-    
+    border-right: 3px solid black; 
+    display: inline-block;
     animation: typing 4s steps(20) forwards infinite, blink 0.7s steps(1) infinite;
 }
 
@@ -196,8 +169,6 @@ nav ul li a:hover {
         border-color: transparent;
     }
 }
-
-
 
 .homeabout {
     font-size: 1.5rem;
@@ -297,7 +268,6 @@ nav ul li a:hover {
 .about-container {
     display: flex;
     justify-content: center;
-    /* Ensure alignment */
     gap: 80px;
 }
 
@@ -378,14 +348,13 @@ nav ul li a:hover {
     padding-top: 20px;
 }
 
-
 .underline {
     width: 100px;
     height: 5px;
     background: linear-gradient(90deg, rgb(199, 27, 56), red, rgb(199, 27, 56));
     margin: 10px auto;
     border-radius: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .project-detail {
@@ -416,15 +385,20 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+.rowskill i{
+    padding: 3px;
+}
+
 .rowskill h2 {
     padding: 10px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition-duration: 0.3s;
     border: 1px solid rgb(35, 146, 190);
     border-radius: 0.2rem;
-    background-color: #0000001e;
+    background-color: #00192e;
     color: #c2c2c2;
     animation: float 3s ease-in-out infinite;
 }
@@ -595,7 +569,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     font-size: 1rem;
-    padding: 20px;
+    padding: 10px;
 }
 
 .footcon a {
@@ -612,12 +586,12 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 10px;
 }
 
 .social-links a {
-    font-size: 1.2rem;
-    margin: 0 1.3rem;
+    font-size: 1.3rem;
+    margin: 0 1rem;
 
 }
 
@@ -628,7 +602,6 @@ footer a {
 
 #projects {
     scroll-margin-top: 60px;
-    /* Adjust this value based on your navbar height */
 }
 
 
@@ -760,6 +733,10 @@ footer a {
         justify-content: space-evenly;
         align-items: center;
         height: auto;
+    }
+
+    .logo{
+        font-size: 1.2rem;
     }
 
     .footcon {
