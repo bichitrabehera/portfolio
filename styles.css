@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -9,17 +9,17 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #001933;
+    background-color: #111111;
     color: white;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #0000005d;
+    padding: 15px 130px;
     color: #c2c2c2;
     position: fixed;
     backdrop-filter: blur(10px);
@@ -29,9 +29,9 @@ nav {
     z-index: 1000;
 }
 
-nav .logo h2 , .logo{
+nav .logo h2,
+.logo {
     margin: 0;
-    font-size: 1.7rem;
     letter-spacing: 1px;
     font-weight: bolder;
     color: rgb(0, 140, 255);
@@ -52,8 +52,7 @@ nav ul {
 nav ul li a {
     color: #c2c2c2;
     text-decoration: none;
-    font-weight: 800;
-    font-size: 1rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -65,9 +64,8 @@ nav ul li a:hover {
     position: fixed;
     right: -250px;
     top: 0;
-    background-color: #000000;
+    background-color: #111111;
     color: #c2c2c2;
-    position: fixed;
     width: 180px;
     height: 100%;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
@@ -98,7 +96,6 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -111,10 +108,13 @@ nav ul li a:hover {
     right: 20px;
     top: 15px;
     color: #c2c2c2;
-    font-size: 1.4rem;
     cursor: pointer;
     display: none;
     padding: 0 10px;
+}
+
+.toggle-btn i {
+    font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -127,7 +127,6 @@ nav ul li a:hover {
     }
 }
 
-
 #home {
     display: flex;
     justify-content: center;
@@ -137,20 +136,17 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.homecontainer {
-    max-width: 800px;
-}
 .heading-about {
     margin: 0 auto;
-    font-size: 3.5rem;
     font-weight: bold;
+    font-size: 3rem;
     padding: 10px;
     margin-bottom: 20px;
     line-height: 1.3;
     letter-spacing: 2px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid black; 
+    border-right: 3px solid black;
     display: inline-block;
     animation: typing 4s steps(20) forwards infinite, blink 0.7s steps(1) infinite;
 }
@@ -159,6 +155,7 @@ nav ul li a:hover {
     from {
         width: 0;
     }
+
     to {
         width: 73%;
     }
@@ -171,7 +168,6 @@ nav ul li a:hover {
 }
 
 .homeabout {
-    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 20px;
     padding: 10px;
@@ -181,8 +177,8 @@ nav ul li a:hover {
 .heroo-btn button {
     background: #003c80;
     border: none;
+    margin-top: 40px;
     padding: 15px 25px;
-    font-size: 1.1rem;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -214,52 +210,14 @@ nav ul li a:hover {
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-150%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideOut {
-    from {
-        transform: translateX(150%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
 .about-info {
     text-align: center;
-    font-size: 1.2rem;
     padding-bottom: 2rem;
     padding: 20px;
 }
 
-.containerabout {
-    max-width: 1200px;
-}
-
 .aboutcont {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1.1px;
     word-spacing: 1px;
     line-height: 1.5;
@@ -284,18 +242,15 @@ nav ul li a:hover {
 
 .aboutcont h3 {
     margin-bottom: 2rem;
-    font-size: 1.5rem;
 }
-
 
 .hero-btn {
     justify-content: start;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 1rem 3rem;
     background-color: rgb(0, 77, 128);
     border: none;
     border-radius: 0.3rem;
-    font-size: 0.9rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -308,19 +263,12 @@ nav ul li a:hover {
 .hero-btn:hover {
     background-color: rgb(0, 126, 175);
     transform: translateY(-5px);
-    transform: 0.2s;
 }
 
-.skillcont h3 {
-    margin-bottom: 2rem;
-    text-align: start;
-    font-size: 1.5rem;
-}
-
+.skillcont h3,
 .skills-vert h3 {
     margin-bottom: 2rem;
     text-align: start;
-    font-size: 1.5rem;
 }
 
 #about {
@@ -329,20 +277,16 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 20px;
-}
-
-.about-size {
-    font-size: 24px;
+    padding: 0 100px;
 }
 
 .titles {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    font-weight: 800;
+    font-weight: 500;
+    font-size: 2rem;
     color: #c2c2c2;
-    align-items: left;
     letter-spacing: 0.2rem;
     margin-bottom: 0;
     padding-top: 20px;
@@ -358,7 +302,6 @@ nav ul li a:hover {
 }
 
 .project-detail {
-    font-size: 0.9rem;
     text-align: left;
 }
 
@@ -385,16 +328,16 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.rowskill i{
+.rowskill i {
     padding: 3px;
 }
 
 .rowskill h2 {
     padding: 10px;
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
     transition-duration: 0.3s;
     border: 1px solid rgb(35, 146, 190);
     border-radius: 0.2rem;
@@ -432,15 +375,14 @@ nav ul li a:hover {
 .project {
     width: 300px;
     min-height: 380px;
-    border-radius: 0.2rem;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    background-color: #001933;
+    border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.192);
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px 10px;
+    font-size: 0.85rem;
 }
 
 .project:hover {
@@ -454,7 +396,6 @@ nav ul li a:hover {
 }
 
 .protitle {
-    font-size: 18px;
     font-weight: bold;
     margin: 15px 0;
     color: #c2c2c2;
@@ -464,18 +405,16 @@ nav ul li a:hover {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
-    background-color: #007BFF;
+    background-color: #003c80;
     color: #c2c2c2;
     text-decoration: none;
     border-radius: 0.2rem;
-    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
 .project-links .btn:hover {
     background-color: #0056b3;
 }
-
 
 #contact {
     padding: 20px 20px;
@@ -486,35 +425,32 @@ nav ul li a:hover {
 }
 
 .contact-section {
-    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 form {
-    background-color: #001933;
     border: 1px solid rgba(255, 255, 255, 0.199);
     max-width: 650px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 1rem;
-    border-radius: 5px;
+    border-radius: 0.4rem;
 }
 
 form input,
 form textarea {
     width: 95%;
-    padding: 15px;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #333;
     border-radius: 1px;
     background-color: #ffffff15;
     color: #c2c2c2;
-    font-size: 16px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 form input::placeholder,
@@ -528,7 +464,6 @@ form textarea:focus {
     outline: none;
     border-color: #00bcd4;
     background-color: #444;
-
 }
 
 .contact-btn {
@@ -537,7 +472,6 @@ form textarea:focus {
     background-color: rgb(0, 77, 128);
     border: 1px solid black;
     border-radius: 0.3rem;
-    font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -551,25 +485,24 @@ form textarea:focus {
 .contact-btn:hover {
     background-color: rgb(0, 126, 175);
     transform: translateY(-5px);
-    transform: 0.2s;
 }
 
 footer {
-    width: 100%;
     bottom: 0px;
     display: block;
     justify-content: space-evenly;
     align-items: center;
     color: #c2c2c2;
     background-color: #000000;
+    padding: 20px 100px;
 }
 
 .footcon {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1rem;
     padding: 10px;
+    font-size: 0.9rem;
 }
 
 .footcon a {
@@ -579,36 +512,39 @@ footer {
 footer a {
     text-decoration: none;
     color: rgb(183, 183, 183);
-    font-size: 15px;
 }
 
 .social {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 20px;
 }
 
 .social-links a {
-    font-size: 1.3rem;
     margin: 0 1rem;
+}
 
+.social-links a i{
+    font-size: 1.2rem;
 }
 
 .social-links a:hover {
     color: white;
 }
 
-
 #projects {
     scroll-margin-top: 60px;
 }
 
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
+
+nav{
+    padding: 15px 20px;
+}
 
     nav .logo h2 {
         font-size: 1.2rem;
@@ -619,26 +555,24 @@ footer a {
     }
 
     #home {
-        max-height: 600px;
+        height: 100vh;
+    }
+
+    #about{
+        padding: 20px;
     }
 
     .heading-about {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .homeabout {
         padding: 20px 10px;
-    }
-
-    .homeabout {
         font-size: 1rem;
-        text-align: center;
     }
 
     .homeabout {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
     }
 
     .homecontainer {
@@ -647,16 +581,15 @@ footer a {
         align-items: center;
         margin-top: 70px;
         width: 100%;
-        font-size: 30px;
     }
 
     .aboutcont {
         padding: 0px;
-        font-size: 17px;
     }
 
     .about-info {
         font-size: 1rem;
+        padding: 0;
     }
 
     .rowskill {
@@ -724,7 +657,6 @@ footer a {
         margin: 10px 0;
         border: 1px solid #333;
         border-radius: 1px;
-        font-size: 16px;
     }
 
     footer {
@@ -733,9 +665,10 @@ footer a {
         justify-content: space-evenly;
         align-items: center;
         height: auto;
+        padding: 0;
     }
 
-    .logo{
+    .logo {
         font-size: 1.2rem;
     }
 
@@ -744,12 +677,10 @@ footer a {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 1rem;
     }
 
     footer a {
         text-decoration: none;
-        font-size: 15px;
     }
 
     .social {

@@ -51,3 +51,9 @@ document.addEventListener("click", function (event) {
         toggleBtnIcon.classList.replace("fa-times", "fa-bars"); // Reset icon
     }
 });
+
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+})
