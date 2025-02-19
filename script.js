@@ -52,8 +52,3 @@ document.addEventListener("click", function (event) {
     }
 });
 
-
- const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
- })

@@ -14,9 +14,7 @@ body {
     font-family: "Atkinson Hyperlegible Next", sans-serif;
     font-family: "Poppins", sans-serif;
 }
-header{
-    position: fixed;
-}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -279,7 +277,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 20px;
-    padding: 0 100px;
+    padding: 0 130px;
 }
 
 .titles {
@@ -343,7 +341,6 @@ nav ul li a:hover {
     transition-duration: 0.3s;
     border: 1px solid rgb(35, 146, 190);
     border-radius: 0.2rem;
-    background-color: #00192e;
     color: #c2c2c2;
     animation: float 3s ease-in-out infinite;
 }
