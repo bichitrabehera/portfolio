@@ -213,7 +213,7 @@ particlesJS("particles-js", {
           out_mode: "out"
       },
       line_linked: {
-          enable: false, // Lines between particles
+          enable: true, // Lines between particles
           distance: 150,
           color: "#ffffff",
           opacity: 0.4,
